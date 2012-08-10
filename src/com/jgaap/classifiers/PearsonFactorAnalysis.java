@@ -17,22 +17,22 @@ import com.jgaap.generics.EventHistogram;
 import com.jgaap.generics.EventSet;
 import com.jgaap.generics.Pair;
 
-public class FactorAnalysis extends AnalysisDriver {
+public class PearsonFactorAnalysis extends AnalysisDriver {
 
 	private List<Pair<String, Double>> correlations;
 	
-	public FactorAnalysis() {
+	public PearsonFactorAnalysis() {
 		correlations = new ArrayList<Pair<String, Double>>();
 	}
 
 	@Override
 	public String displayName() {
-		return "Personality Factor Analysis";
+		return "Personality Pearson Factor Analysis";
 	}
 
 	@Override
 	public String tooltipText() {
-		return "Personality Factor Analysis";
+		return "Personality Pearson Factor Analysis";
 	}
 
 	@Override
