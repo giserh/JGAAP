@@ -124,6 +124,16 @@ public class Utils {
 		stddev = stddev / (observations.size() - 1); // Get the sample standard deviation
 		return Math.sqrt(stddev);
 	}
+	
+	public static double mean(List<Double> observations) {
+		double mean = 0.0;
+		
+		for(Double d : observations) {
+			mean += d;
+		}
+		
+		return mean / observations.size();
+	}
 
 	/**
 	 * 
