@@ -17,6 +17,12 @@ import com.jgaap.generics.EventHistogram;
 import com.jgaap.generics.EventSet;
 import com.jgaap.generics.Pair;
 
+/**
+ * NOTE: The N-1 factor in stddev makes the results here different than most 
+ * online examples.
+ * @author jnoecker
+ *
+ */
 public class PearsonFactorAnalysis extends AnalysisDriver {
 
 	private List<Pair<String, Double>> correlations;
@@ -64,7 +70,7 @@ public class PearsonFactorAnalysis extends AnalysisDriver {
 		for(Event e : allEvents) {
 			List<Double> eventUsage = new ArrayList<Double>();
 			for(EventHistogram h : histograms) {
-				eventUsage.add(h.getNormalizedFrequency(e));
+				eventUsage.add(new Double(h.getNormalizedFrequency(e)));
 			}
 			
 			double usageMean = com.jgaap.backend.Utils.mean(eventUsage);
