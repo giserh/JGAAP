@@ -91,7 +91,7 @@ public class PearsonFactorAnalysis extends AnalysisDriver {
 		
 
 		Collections.sort(correlations);
-		Collections.reverse(correlations);
+		//Collections.reverse(correlations);
 		
 		for(Pair<String, Double> p : correlations) {
 			System.out.println(p.getFirst() + "\t" + p.getSecond());
